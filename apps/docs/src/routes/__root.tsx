@@ -354,6 +354,9 @@ function DocsSidebar() {
         <TreeView.Item href='/utilities/surface' onClick={handleClick}>
           Surface
         </TreeView.Item>
+        <TreeView.Item href='/utilities/surface-stress' onClick={handleClick}>
+          Surface Stress Test
+        </TreeView.Item>
         <TreeView.Item href='/utilities/scroll-fade' onClick={handleClick}>
           Scroll Fade
         </TreeView.Item>

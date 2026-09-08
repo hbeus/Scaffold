@@ -1,4 +1,5 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { Button, Flex } from '@base/ui';
+import { createFileRoute, Link } from '@tanstack/react-router';
 import { ComponentExample } from '~/components/ComponentExample';
 import { DocsPage } from '~/components/DocsPage';
 import SurfaceButtons from '~/examples/surface/buttons';
@@ -36,6 +37,11 @@ function PageComponent() {
       title='Surface Levels'
       description='Six opaque surface levels (0–500) via React context. Wrap with SurfaceLevel to auto-increment (+100) or jump to an absolute level, then paint with useSurface(). Filled controls (Button primary, Card, fields) consume this ladder; hover washes stay on lighten tokens.'
     >
+      <Flex direction='row'>
+        <Link to='/utilities/surface-stress'>
+          <Button variant='primary' size='sm'>View stress test</Button>
+        </Link>
+      </Flex>
       <ComponentExample title='All Levels' code={highlighted.levelsRaw} rawCode={levelsRaw} defaultExpanded>
         <SurfaceLevels />
       </ComponentExample>
