@@ -155,19 +155,19 @@ export const PRIMARY_BUTTON_CONFIG = {
 export const FOREGROUND_CONFIG = {
   primary: { dark: { lightness: 0.985 }, light: { lightness: 0.16 } },
   hover: { dark: { lightness: 1.0 }, light: { lightness: 0.1 } },
-  inverse: { dark: { lightness: 0.12 }, light: { lightness: 0.985 } },
+  inverse: { dark: { lightness: 0.1157 }, light: { lightness: 0.985 } },
 } satisfies Record<string, { dark: LightnessValue; light: LightnessValue }>;
 
 /* ---------- Background ---------- */
 
 export const BACKGROUND_CONFIG = {
-  base: { dark: { lightness: 0.12 }, light: { lightness: 0.965 } },
-  surface100: { dark: { lightness: 0.185 }, light: { lightness: 0.977 } },
-  surface200: { dark: { lightness: 0.26 }, light: { lightness: 0.986 } },
-  surface300: { dark: { lightness: 0.3 }, light: { lightness: 0.993 } },
-  surface400: { dark: { lightness: 0.33 }, light: { lightness: 0.997 } },
-  surface500: { dark: { lightness: 0.35 }, light: { lightness: 0.999 } },
-  surface600: { dark: { lightness: 0.37 }, light: { lightness: 1.0 } },
+  base: { dark: { lightness: 0.1157 }, light: { lightness: 0.9542 } },
+  surface100: { dark: { lightness: 0.193 }, light: { lightness: 0.9848 } },
+  surface200: { dark: { lightness: 0.2376 }, light: { lightness: 1.0 } },
+  surface300: { dark: { lightness: 0.2801 }, light: { lightness: 1.0 } },
+  surface400: { dark: { lightness: 0.3211 }, light: { lightness: 1.0 } },
+  surface500: { dark: { lightness: 0.3608 }, light: { lightness: 1.0 } },
+  surface600: { dark: { lightness: 0.3994 }, light: { lightness: 1.0 } },
 } satisfies Record<string, { dark: LightnessValue; light: LightnessValue }>;
 
 /* ---------- Opacity ---------- */
