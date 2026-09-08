@@ -1,0 +1,21 @@
+---
+description: Do not add explanatory comments when editing code
+alwaysApply: true
+---
+
+# No agent comments
+
+Do not add comments when making code changes.
+
+- No explanatory, narrative, or "why this works" comments
+- No JSDoc/`/** ... */` on new or edited APIs unless the user explicitly asks
+- No JSX `{/* ... */}` comments describing patterns or intent
+- Prefer clear names and structure over comments
+
+**Allowed:** section divider comments only:
+
+```css
+/* ---------- Title ---------- */
+```
+
+Use them sparingly in large compound/barrel files for navigation. Do not invent other divider styles (`=====`, `———`, `// data`, etc.) — convert to this form when editing. If unsure whether a divider is needed, omit it.

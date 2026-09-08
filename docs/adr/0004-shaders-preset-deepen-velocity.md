@@ -1,0 +1,13 @@
+# Deepen `@base/shaders`: Mesh / Palette / Blobs, velocity, Ripple & Warp
+
+We want to deepen the shipped `@base/shaders` catalog with two strong gradient-class presets, richer pointer interaction via velocity, and optional deepens of existing interactive presets — without reopening ADR 0001 (package/engine) or ADR 0003 (next-phase catalog / pointer / `resolveColor`), and without adopting a composition engine or flowmap host.
+
+**Decision:** Keep ADR 0001 as foundation and ADR 0003 as the prior evolution (Warp/Grain/Hex/Ripple, position pointer, `resolveColor`). For this deepen handoff:
+
+- **Catalog:** Add named presets `Shader.Mesh`, `Shader.Palette`, and `Shader.Blobs` (docs routes `/shaders/mesh|palette|blobs`). Deepen in place `Shader.Ripple` and `Shader.Warp` (same routes) with velocity-aware (and for Warp, pointer-aware) behavior — no new product names for those deepens. **Spectrum** (Attio-like angular / conic multi-stop wash) is a **mode/props** of Palette, not a separate Preset. Mesh is an Attio-class soft atmosphere (ambient default) with pointer attract/repel and velocity-bias **props** in scope; Mesh registers `pointer: true` so docs can demo the full surface; reduced-motion still yields ambient via `pointer: null`.
+- **Pointer / velocity:** Extend `PointerState` to `{ x, y, vx, vy, active }`. `vx`/`vy` are **normalized units per second** in the same **0–1, origin bottom-left** space as `x`/`y`. Root owns computation from host pointer events + frame time, applies light exponential smoothing, and decays velocity toward `0` while idle and on leave (leave also sets `active: false`). Opt-in remains `PresetRegistration.pointer`. Under `prefers-reduced-motion`, keep `pointer: null`. **No flowmap / FBO** in this handoff (stays fog unless a later look requires trails).
+- **Docs:** One route per Preset name; DialKit playgrounds for Mesh / Palette / Blobs; extend Ripple & Warp playgrounds for new props. Same IA as ADR 0003.
+
+**Why not alternatives:** Amending ADR 0003 in place would rewrite a closed next-phase decision. A separate `Shader.Spectrum` would spend a catalog slot on a Palette sibling. Requiring flowmap/FBO for interaction would block the velocity contract already sufficient for Mesh / Blobs / Ripple / Warp. Stackable layers and a shaders.com-style editor remain out of scope.
+
+**Handoff:** Glossary in `CONTEXT.md` (Shaders — Pointer, including velocity). Index of ticket resolutions on wayfinder map [Shaders preset deepen route](https://github.com/hbeus/Base/issues/39). Research shortlist: branch `research/next-preset-shortlist-gradients-interaction`. Implementation is a separate effort after this map clears.

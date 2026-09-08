@@ -1,0 +1,33 @@
+html[data-theme="dark"] .shiki,
+html[data-theme="dark"] .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+.code-block-surface {
+  background-color: #faf4ed;
+}
+
+html[data-theme="dark"] .code-block-surface {
+  background-color: #101010;
+}
+
+.scroll-fade .shiki,
+.scroll-fade .shiki span {
+  background-color: transparent !important;
+}
+
+.shiki {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.shiki code {
+  display: block;
+}

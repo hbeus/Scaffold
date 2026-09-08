@@ -1,0 +1,29 @@
+{
+  "name": "base",
+  "private": true,
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @base/web --filter @base/docs dev",
+    "dev:app": "pnpm --filter @base/web dev",
+    "dev:docs": "pnpm --filter @base/docs dev",
+    "build": "pnpm --filter @base/web --filter @base/docs build",
+    "build:app": "pnpm --filter @base/web build",
+    "build:docs": "pnpm --filter @base/docs build",
+    "start": "pnpm --filter @base/web start",
+    "start:docs": "pnpm --filter @base/docs start",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "test": "pnpm -r test",
+    "db:generate": "pnpm --filter @base/db generate",
+    "db:migrate": "pnpm --filter @base/db migrate",
+    "db:studio": "pnpm --filter @base/db studio",
+    "generate:themes": "npx tsx packages/ui/scripts/generate-themes.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.1"
+  }
+}

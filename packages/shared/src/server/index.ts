@@ -1,0 +1,1 @@
+export { getThemeFromCookie } from './theme';
