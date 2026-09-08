@@ -54,12 +54,14 @@ export const buttonStyles = stylex.create({
   },
   primary: {
     color: colors.foregroundPrimary,
+    boxShadow: colors.shadowElevated,
   },
   ghost: {
     backgroundColor: 'transparent',
     color: colors.foregroundSecondary,
     ':hover': {
       color: colors.foregroundPrimary,
+      boxShadow: colors.shadowElevated,
     },
   },
   inherit: {

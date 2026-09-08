@@ -73,14 +73,9 @@ const inputGroupStyles = stylex.create({
   base: {
     display: 'flex',
     alignItems: 'center',
-    borderWidth: borders.default,
-    borderStyle: 'solid',
-    borderColor: colors.border,
+    borderWidth: 0,
     borderRadius: radii.r8,
-    transition: 'border-color 0.15s',
-    ':focus-within': {
-      borderColor: colors.highlight,
-    },
+    boxShadow: colors.shadowElevated,
   },
 });
 

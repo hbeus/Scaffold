@@ -50,15 +50,10 @@ const inputStyles = stylex.create({
     fontSize: typography.bodySize,
     fontWeight: 500,
     color: colors.foregroundPrimary,
-    borderWidth: borders.default,
-    borderStyle: 'solid',
-    borderColor: colors.border,
+    borderWidth: 0,
     borderRadius: radii.r8,
+    boxShadow: colors.shadowElevated,
     outline: 'none',
-    transition: 'border-color 0.15s',
-    ':focus': {
-      borderColor: colors.highlight,
-    },
   },
 });
 

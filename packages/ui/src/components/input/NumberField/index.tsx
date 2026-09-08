@@ -52,18 +52,13 @@ export interface NumberFieldInputProps
 const inputStyles = stylex.create({
   base: {
     width: '100%',
-    borderWidth: borders.default,
-    borderStyle: 'solid',
-    borderColor: colors.border,
+    borderWidth: 0,
     color: colors.foregroundPrimary,
+    boxShadow: colors.shadowElevated,
     outline: 'none',
-    transition: 'border-color 0.15s',
     textAlign: 'left',
     '::placeholder': {
       color: colors.foregroundSecondary,
-    },
-    ':focus': {
-      borderColor: colors.lighten16,
     },
     ':disabled': {
       opacity: 0.5,

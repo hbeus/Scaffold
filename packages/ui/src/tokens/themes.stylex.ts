@@ -213,7 +213,7 @@ export const colors = stylex.defineVars({
   chartCrosshair: 'oklch(0.985 0 0 / 0.35)',
   chartTooltipBg: 'oklch(0.2801 0 0)',
   chartTooltipFg: 'oklch(0.985 0 0)',
-  shadowElevated: '0 0 0 1px oklch(0 0 0 / 0.04), 0 2px 8px oklch(0 0 0 / 0.01), 0 2px 6px -4px oklch(0 0 0 / 0.08), 0 4px 10px oklch(0 0 0 / 0.02), 0 4px 24px oklch(0 0 0 / 0.02)',
+  shadowElevated: '0 0 0 1px oklch(0 0 0 / 0.04), 0 2px 8px oklch(0 0 0 / 0.01), 0 2px 6px -4px oklch(0 0 0 / 0.08), 0 4px 10px oklch(0 0 0 / 0.02), 0 4px 24px oklch(0 0 0 / 0.02), inset 0 0 0 1px oklch(1 0 0 / 0.02)',
   shadowElevatedInner: 'inset 0 0 0 1px oklch(1 0 0 / 0.02)',
 });
 
@@ -278,7 +278,7 @@ export const defaultLight = stylex.createTheme(colors, {
   chartCrosshair: 'oklch(0.16 0 0 / 0.35)',
   chartTooltipBg: 'oklch(1 0 0)',
   chartTooltipFg: 'oklch(0.16 0 0)',
-  shadowElevated: '0 0 0 1px oklch(0 0 0 / 0.04), 0 2px 8px oklch(0 0 0 / 0.01), 0 2px 6px -4px oklch(0 0 0 / 0.08), 0 4px 10px oklch(0 0 0 / 0.02), 0 4px 24px oklch(0 0 0 / 0.02)',
+  shadowElevated: '0 0 0 1px oklch(0 0 0 / 0.04), 0 2px 8px oklch(0 0 0 / 0.01), 0 2px 6px -4px oklch(0 0 0 / 0.08), 0 4px 10px oklch(0 0 0 / 0.02), 0 4px 24px oklch(0 0 0 / 0.02), inset 0 0 0 1px oklch(1 0 0 / 0.5)',
   shadowElevatedInner: 'inset 0 0 0 1px oklch(1 0 0 / 0.5)',
 });
 

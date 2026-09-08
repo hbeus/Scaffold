@@ -253,7 +253,7 @@ export function modeToVars(mode: ThemeMode) {
     chartTooltipBg: `oklch(${mode.chart.tooltipBg})`,
     chartTooltipFg: `oklch(${mode.chart.tooltipFg})`,
 
-    shadowElevated: `0 0 0 1px oklch(${mode.shadow.drop} / ${se.ring}), 0 2px 8px oklch(${mode.shadow.drop} / ${se.ambient1}), 0 2px 6px -4px oklch(${mode.shadow.drop} / ${se.key}), 0 4px 10px oklch(${mode.shadow.drop} / ${se.ambient2}), 0 4px 24px oklch(${mode.shadow.drop} / ${se.spread})`,
+    shadowElevated: `0 0 0 1px oklch(${mode.shadow.drop} / ${se.ring}), 0 2px 8px oklch(${mode.shadow.drop} / ${se.ambient1}), 0 2px 6px -4px oklch(${mode.shadow.drop} / ${se.key}), 0 4px 10px oklch(${mode.shadow.drop} / ${se.ambient2}), 0 4px 24px oklch(${mode.shadow.drop} / ${se.spread}), inset 0 0 0 1px oklch(${mode.shadow.inner})`,
     shadowElevatedInner: `inset 0 0 0 1px oklch(${mode.shadow.inner})`,
   };
 }

@@ -55,6 +55,7 @@ const gaps = stylex.create({
 const variants = stylex.create({
   filled: {
     borderWidth: 0,
+    boxShadow: colors.shadowElevated,
   },
   outline: {
     backgroundColor: 'transparent',

@@ -26,10 +26,11 @@ export interface InputProps
 const styles = stylex.create({
   base: {
     width: '100%',
+    borderWidth: 0,
     borderRadius: radii.r8,
     color: colors.foregroundPrimary,
     outline: 'none',
-    transition: 'border-color 0.15s',
+    boxShadow: colors.shadowElevated,
     '::placeholder': {
       color: colors.foregroundSecondary,
     },
