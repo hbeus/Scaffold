@@ -323,21 +323,6 @@ function DocsSidebar() {
         <TreeView.Item href='/shaders' onClick={handleClick}>
           Overview
         </TreeView.Item>
-        <TreeView.Item href='/shaders/aurora' onClick={handleClick}>
-          Aurora
-        </TreeView.Item>
-        <TreeView.Item href='/shaders/warp' onClick={handleClick}>
-          Warp
-        </TreeView.Item>
-        <TreeView.Item href='/shaders/grain' onClick={handleClick}>
-          Grain
-        </TreeView.Item>
-        <TreeView.Item href='/shaders/hex' onClick={handleClick}>
-          Hex
-        </TreeView.Item>
-        <TreeView.Item href='/shaders/ripple' onClick={handleClick}>
-          Ripple
-        </TreeView.Item>
         <TreeView.Item href='/shaders/mesh' onClick={handleClick}>
           Mesh
         </TreeView.Item>

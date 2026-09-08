@@ -1,22 +1,13 @@
 import { Flex, Text } from '@base/ui';
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { ComponentExample } from '~/components/ComponentExample';
 import { DocsPage } from '~/components/DocsPage';
 import { InlineCode } from '~/components/InlineCode';
-import AuroraTokens from '~/examples/shaders/aurora-tokens';
-import tokensRaw from '~/examples/shaders/aurora-tokens.tsx?raw';
-import { highlightCode } from '~/lib/highlight';
 
 export const Route = createFileRoute('/shaders/')({
-  loader: async () => {
-    return { tokensRaw: await highlightCode({ data: { code: tokensRaw } }) };
-  },
   component: ShadersOverviewPage,
 });
 
 function ShadersOverviewPage() {
-  const highlighted = Route.useLoaderData();
-
   return (
     <DocsPage
       title='Shaders'
@@ -47,7 +38,7 @@ import { Shader, resolveColor } from '@base/shaders'`}
           </Text>
           <pre>
             {`<Shader.Root style={{ height: 320 }} fallback={…}>
-  <Shader.Aurora colorA="#0b1d36" colorB="#3d8bfd" />
+  <Shader.Mesh colorA="#fd9038" colorB="#266df0" colorC="#ff5b59" colorD="#13dd8d" />
 </Shader.Root>`}
           </pre>
         </Flex>
@@ -77,9 +68,6 @@ import { Shader, resolveColor } from '@base/shaders'`}
             <InlineCode>@base/ui</InlineCode> dependency). Prefer resolving against the Root host so
             cascade matches the shader surface.
           </Text>
-          <ComponentExample title='CSS variables' code={highlighted.tokensRaw} rawCode={tokensRaw}>
-            <AuroraTokens />
-          </ComponentExample>
         </Flex>
 
         <Flex direction='column' gap='s8'>
@@ -87,10 +75,9 @@ import { Shader, resolveColor } from '@base/shaders'`}
             Presets
           </Text>
           <Text color='secondary'>
-            <Link to='/shaders/aurora'>Aurora</Link>, <Link to='/shaders/warp'>Warp</Link>,{' '}
-            <Link to='/shaders/grain'>Grain</Link>, <Link to='/shaders/hex'>Hex</Link>,{' '}
-            <Link to='/shaders/ripple'>Ripple</Link>, <Link to='/shaders/mesh'>Mesh</Link>,{' '}
-            <Link to='/shaders/palette'>Palette</Link>, <Link to='/shaders/blobs'>Blobs</Link> —
+            <Link to='/shaders/mesh'>Mesh</Link>,{' '}
+            <Link to='/shaders/palette'>Palette</Link>,{' '}
+            <Link to='/shaders/blobs'>Blobs</Link> —
             each with DialKit playgrounds and props.
           </Text>
         </Flex>
