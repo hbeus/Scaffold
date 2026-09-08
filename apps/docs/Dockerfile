@@ -23,7 +23,7 @@ COPY --from=deps /app/packages/charts/node_modules ./packages/charts/node_module
 COPY --from=deps /app/packages/shaders/node_modules ./packages/shaders/node_modules
 COPY --from=deps /app/packages/canvas/node_modules ./packages/canvas/node_modules
 COPY . .
-RUN pnpm --filter @base/docs build
+RUN pnpm --filter @base/docs exec vite build
 
 # Production
 FROM node:22-alpine AS runner
