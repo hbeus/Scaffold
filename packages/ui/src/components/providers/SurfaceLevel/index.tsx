@@ -1,4 +1,4 @@
-import { type ReactNode, useContext } from 'react';
+import { type ReactNode, use } from 'react';
 import {
   SURFACE_MAX,
   SURFACE_STEP,
@@ -12,7 +12,7 @@ export interface SurfaceLevelProps {
 }
 
 export function SurfaceLevel({ level, children }: SurfaceLevelProps) {
-  const parentLevel = useContext(SurfaceContext);
+  const parentLevel = use(SurfaceContext);
 
   const resolvedLevel: SurfaceLevelType =
     level !== undefined

@@ -1,5 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
-import { useContext } from 'react';
+import { use } from 'react';
 
 import { SurfaceContext, type SurfaceLevel } from '../contexts/SurfaceContext';
 import { colors } from '../tokens/themes.stylex';
@@ -23,7 +23,7 @@ export const surfaceHover = stylex.create({
 });
 
 export function useSurfaceLevel(): SurfaceLevel {
-  return useContext(SurfaceContext);
+  return use(SurfaceContext);
 }
 
 export function useSurface() {
