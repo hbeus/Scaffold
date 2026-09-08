@@ -132,7 +132,6 @@ function generateMode(
       lighten: lightenColor,
       darken: darkenColor,
       hover: isDark ? lightenColor : '0 0 0',
-      surface0: nt(bg.surface0[mode].lightness),
       surface100: nt(bg.surface100[mode].lightness),
       surface200: nt(bg.surface200[mode].lightness),
       surface300: nt(bg.surface300[mode].lightness),
@@ -184,7 +183,6 @@ export function modeToVars(mode: ThemeMode) {
 
   return {
     background: `oklch(${mode.background.base})`,
-    surface0: `oklch(${mode.background.surface0})`,
     surface100: `oklch(${mode.background.surface100})`,
     surface200: `oklch(${mode.background.surface200})`,
     surface300: `oklch(${mode.background.surface300})`,

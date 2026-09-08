@@ -23,8 +23,7 @@ export const THEME = {
         lighten: '1 0 0',
         darken: '0 0 0',
         hover: '1 0 0',
-        surface0: '0.12 0 0',
-        surface100: '0.2 0 0',
+        surface100: '0.185 0 0',
         surface200: '0.26 0 0',
         surface300: '0.3 0 0',
         surface400: '0.33 0 0',
@@ -89,7 +88,6 @@ export const THEME = {
         lighten: '0 0 0',
         darken: '1 0 0',
         hover: '0 0 0',
-        surface0: '0.965 0 0',
         surface100: '0.977 0 0',
         surface200: '0.986 0 0',
         surface300: '0.993 0 0',
@@ -156,8 +154,7 @@ export const COLOR_SCHEMES = Object.keys(THEME[PALETTES[0]]) as ColorScheme[];
 
 export const colors = stylex.defineVars({
   background: 'oklch(0.12 0 0)',
-  surface0: 'oklch(0.12 0 0)',
-  surface100: 'oklch(0.2 0 0)',
+  surface100: 'oklch(0.185 0 0)',
   surface200: 'oklch(0.26 0 0)',
   surface300: 'oklch(0.3 0 0)',
   surface400: 'oklch(0.33 0 0)',
@@ -222,7 +219,6 @@ export const colors = stylex.defineVars({
 
 export const defaultLight = stylex.createTheme(colors, {
   background: 'oklch(0.965 0 0)',
-  surface0: 'oklch(0.965 0 0)',
   surface100: 'oklch(0.977 0 0)',
   surface200: 'oklch(0.986 0 0)',
   surface300: 'oklch(0.993 0 0)',

@@ -5,7 +5,7 @@ import { SurfaceContext, type SurfaceLevel } from '../contexts/SurfaceContext';
 import { colors } from '../tokens/themes.stylex';
 
 const surfaceBg = stylex.create({
-  0: { backgroundColor: colors.surface0 },
+  0: { backgroundColor: colors.background },
   100: { backgroundColor: colors.surface100 },
   200: { backgroundColor: colors.surface200 },
   300: { backgroundColor: colors.surface300 },

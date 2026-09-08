@@ -21,7 +21,6 @@ export type ThemeMode = {
     lighten: string;
     darken: string;
     hover: string;
-    surface0: string;
     surface100: string;
     surface200: string;
     surface300: string;
@@ -163,8 +162,7 @@ export const FOREGROUND_CONFIG = {
 
 export const BACKGROUND_CONFIG = {
   base: { dark: { lightness: 0.12 }, light: { lightness: 0.965 } },
-  surface0: { dark: { lightness: 0.12 }, light: { lightness: 0.965 } },
-  surface100: { dark: { lightness: 0.2 }, light: { lightness: 0.977 } },
+  surface100: { dark: { lightness: 0.185 }, light: { lightness: 0.977 } },
   surface200: { dark: { lightness: 0.26 }, light: { lightness: 0.986 } },
   surface300: { dark: { lightness: 0.3 }, light: { lightness: 0.993 } },
   surface400: { dark: { lightness: 0.33 }, light: { lightness: 0.997 } },

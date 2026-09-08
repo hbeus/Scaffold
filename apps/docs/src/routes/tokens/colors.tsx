@@ -73,7 +73,6 @@ const styles = stylex.create({
 
 const swatchColors = stylex.create({
   background: { backgroundColor: colors.background },
-  surface0: { backgroundColor: colors.surface0 },
   surface100: { backgroundColor: colors.surface100 },
   surface200: { backgroundColor: colors.surface200 },
   surface300: { backgroundColor: colors.surface300 },
@@ -195,7 +194,6 @@ function ColorsPage() {
         <Section title='Background & Surfaces'>
           <div {...stylex.props(styles.grid)}>
             <Swatch name='background' colorStyle={swatchColors.background} />
-            <Swatch name='surface0' colorStyle={swatchColors.surface0} />
             <Swatch name='surface100' colorStyle={swatchColors.surface100} />
             <Swatch name='surface200' colorStyle={swatchColors.surface200} />
             <Swatch name='surface300' colorStyle={swatchColors.surface300} />
