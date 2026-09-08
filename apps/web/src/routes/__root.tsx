@@ -6,13 +6,7 @@ import appCss from '@base/shared/styles/global.css?url';
 import { SurfaceLevel, useSurface } from '@base/ui';
 import { radii } from '@base/ui/tokens/radii.stylex';
 import { spacing } from '@base/ui/tokens/spacing.stylex';
-import {
-  colors,
-  PALETTES,
-  type Palette,
-  themeBackgrounds,
-  themeMap,
-} from '@base/ui/tokens/themes.stylex';
+import { colors, themeBackgrounds, themeMap } from '@base/ui/tokens/themes.stylex';
 import * as stylex from '@stylexjs/stylex';
 import { IconArrowLeft, IconContrast } from '@tabler/icons-react';
 import {
@@ -118,40 +112,6 @@ const fixedButtonStyles = stylex.create({
   },
 });
 
-const palettePickerStyles = stylex.create({
-  container: {
-    position: 'fixed',
-    zIndex: 9999,
-    top: spacing.s16,
-    right: `calc(${spacing.s16} + ${spacing.s32} + ${spacing.s8})`,
-    display: 'flex',
-    gap: spacing.s4,
-    alignItems: 'center',
-  },
-  swatch: {
-    width: spacing.s16,
-    height: spacing.s16,
-    borderRadius: '50%',
-    cursor: 'pointer',
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: 'transparent',
-    transition: 'border-color 0.15s, transform 0.15s',
-    ':hover': {
-      transform: 'scale(1.2)',
-    },
-  },
-  active: {
-    borderColor: colors.foregroundPrimary,
-  },
-});
-
-const PALETTE_COLORS: Record<Palette, string> = {
-  default: 'oklch(0.5 0 0)',
-  blueberry: 'oklch(0.5774 0.2092 275)',
-  warm: 'oklch(0.72 0.15 65)',
-};
-
 function ThemeToggle() {
   const { colorScheme, toggleColorScheme } = useTheme();
   return (
@@ -162,26 +122,6 @@ function ThemeToggle() {
     >
       <IconContrast size={18} />
     </button>
-  );
-}
-
-function PalettePicker() {
-  const { palette: currentPalette, setPalette } = useTheme();
-  return (
-    <div {...stylex.props(palettePickerStyles.container)}>
-      {PALETTES.map(p => (
-        <button
-          key={p}
-          onClick={() => setPalette(p)}
-          aria-label={`${p} palette`}
-          {...stylex.props(
-            palettePickerStyles.swatch,
-            p === currentPalette && palettePickerStyles.active,
-          )}
-          style={{ backgroundColor: PALETTE_COLORS[p] }}
-        />
-      ))}
-    </div>
   );
 }
 
@@ -208,7 +148,6 @@ function RootBody({ children }: { children: React.ReactNode }) {
   return (
     <body {...stylex.props(bodyStyles.base, surface)}>
       <BackButton />
-      <PalettePicker />
       <ThemeToggle />
       {children}
     </body>

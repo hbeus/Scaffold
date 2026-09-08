@@ -157,10 +157,8 @@ function ThemingGuidePage() {
               </tbody>
             </table>
           </div>
-          <Code>{`// Example theme configs
-default:   { brandHue: null, neutralTint: 0,     stateHarmony: 0 }
-blueberry: { brandHue: 275,  neutralTint: 0.015, stateHarmony: 0.15 }
-warm:      { brandHue: 65,   neutralTint: 0.02,  stateHarmony: 0.12 }`}</Code>
+          <Code>{`// Theme config
+default: { brandHue: null, neutralTint: 0, stateHarmony: 0 }`}</Code>
         </Flex>
       </Section>
 

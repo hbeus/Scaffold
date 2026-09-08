@@ -201,6 +201,4 @@ export const ACHROMATIC_DATA_HUES = [220, 30, 145, 280, 55, 190, 350, 100] as co
 
 export const CONFIGS = {
   default: { brandHue: null, neutralTint: 0, stateHarmony: 0 },
-  blueberry: { brandHue: 275, neutralTint: 0.015, stateHarmony: 0.15 },
-  warm: { brandHue: 65, neutralTint: 0.02, stateHarmony: 0.12 },
 } as const satisfies Record<string, ThemeConfig>;
